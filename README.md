@@ -20,7 +20,7 @@ The default mappings done by this application are listed below:
 
 This application is really simple to install with only a couple of steps. 
 
-1. Download the zip file and extract it somewhere on your Windows PC.  Currently tested to work on Windows 7 32 + 64-bits.
+1. Download the [zip file](https://github.com/ejakubowski/remote-mapper/releases/download/v1.0/remote-mapper.zip) and extract it somewhere on your Windows PC.  Currently tested to work on Windows 7 32 + 64-bits.
 2. Run the application remote_mapper.exe, which was extracted from the zip.  You will notice the application will start minimized since it generally runs in the background.
 3. To have the application startup with your computer just add a shortcut to remote_mapper.exe in your startup programs folder:
   %AppData%\Microsoft\Windows\Start Menu\Programs\Startup
