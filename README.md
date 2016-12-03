@@ -34,3 +34,7 @@ This application is really simple to install with only a couple of steps.
 
 # Troubleshooting
 This application is pretty new so let me know if you are having issues and I will try to help and post things here.
+
+
+# Building
+Developed using C++ with Qt5.5 mingw for windows.  To rebuild simply install Qt5.5 and open the remote_mapper.pro project and build it.  Deploying the exe only requires you package or include all standard Qt5.5 dependency dll's.
