@@ -26,16 +26,18 @@ MainWindow::~MainWindow()
 
 void MainWindow::loadKeyMapping()
 {
+    //remote's keycode   - button description, target action
+
     //keycode: 115, 0x73 - red button, closeChromeAndKodi
-    //keycode: 116, 0x74 - green,
-    //keycode: 117, 0x75 - yellow
-    //keycode: 118, 0x76 - blue
+    //keycode: 116, 0x74 - green button, Netflix
+    //keycode: 117, 0x75 - yellow button
+    //keycode: 118, 0x76 - blue button, Kodi
     //keycode: 114, 0x72 - search button, guide
     //keycode: 172, 0xac - home button, mediaCenterStart
     //keycode: 93, 0x5d - context button
     //keycode: 113, 0x71 - blocky button - enterKey
-    //keycode: 180, 0xb4 - mail button - stop
     //keycode: 181, 0xb5 - video button - record tv
+    //keycode: 180, 0xb4 - mail button - stop
 
     //QHash<int, QString> keyMapList
 
