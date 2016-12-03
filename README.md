@@ -19,16 +19,18 @@ The default mappings done by this application are listed below:
 # Installation
 
 This application is really simple to install with only a couple of steps. 
+
 1. Download the zip file and extract it somewhere on your Windows PC.  Currently tested to work on Windows 7 32 + 64-bits.
 2. Run the application remote_mapper.exe, which was extracted from the zip.  You will notice the application will start minimized since it generally runs in the background.
 3. To have the application startup with your computer just add a shortcut to remote_mapperyour startup programs folder:
-%AppData%\Microsoft\Windows\Start Menu\Programs\Startup
+  %AppData%\Microsoft\Windows\Start Menu\Programs\Startup
 
 
 # Supported Device
 
-Rveal RMKR1 Air Mouse Remote & Keyboard
-https://www.amazon.com/Rveal-RMKR1-Mouse-Remote-Keyboard/dp/B018T3VIT6/ref=sr_1_1?ie=UTF8&qid=1480770575&sr=8-1&keywords=rveal+air+mouse
++ Rveal RMKR1 Air Mouse Remote & Keyboard
+  https://www.amazon.com/Rveal-RMKR1-Mouse-Remote-Keyboard/dp/B018T3VIT6/ref=sr_1_1?ie=UTF8&qid=1480770575&sr=8-1&keywords=rveal+air+mouse
+  
 
 # Troubleshooting
 This application is pretty new so let me know if you are having issues and I will try to help and post things here.
