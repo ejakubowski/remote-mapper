@@ -1,15 +1,64 @@
 #include "shortcuts.h"
 #include "windows.h"
 
-#include <QThread>
-#include <QProcess>
-#include <QFileInfo>
-
 static int KEY_PRESS_DELAY = 500;
 
 Shortcuts::Shortcuts()
 {
 }
+
+void Shortcuts::RunShortcut(QString &shortcutName)
+{
+    if (shortcutName == "mediaCenterStart")
+        Shortcuts::mediaCenterStart();
+    else if (shortcutName == "record")
+        Shortcuts::record();
+    else if (shortcutName == "stop")
+        Shortcuts::stop();
+    else if (shortcutName == "enterKey")
+        Shortcuts::enterKey();
+    else if (shortcutName == "closeChromeAndKodi")
+        Shortcuts::closeChromeAndKodi();
+    else if (shortcutName == "netflix")
+        Shortcuts::netflix();
+    else if (shortcutName == "kodi")
+        Shortcuts::kodi();
+    else if (shortcutName == "guide")
+        Shortcuts::guide();
+    else if (shortcutName == "musicLibrary")
+        Shortcuts::musicLibrary();
+    else if (shortcutName == "videoLibrary")
+        Shortcuts::videoLibrary();
+    else if (shortcutName == "pictureLibrary")
+        Shortcuts::pictureLibrary();
+    else if (shortcutName == "movieLibrary")
+        Shortcuts::movieLibrary();
+    else if (shortcutName == "back")
+        Shortcuts::back();
+    else if (shortcutName == "recordedTv")
+        Shortcuts::recordedTv();
+    else if (shortcutName == "moreInfo")
+        Shortcuts::moreInfo();
+
+//    static void recordedTv();//    'Recorded TV: Ctrl+O or Ctrl+Shift+T
+//    static void guide();//    'Guide: Ctrl+G
+//    static void musicLibrary();//    'Music Library: Ctrl+M
+//    static void videoLibrary();//    'Video Library: Ctrl+E
+//    static void pictureLibrary();//    'Picture Library: Ctrl+I
+//    static void movieLibrary();//    'Movie Library: Ctrl+Shift+M
+//    static void record();//    'Record: Ctrl+R
+//    static void stop();//Ctrl+Shift+S = Stop recording or playing a TV show
+//    static void radio();//    'Radio: Ctrl+A
+//    static void back();//    'Go back to previous screen: Backspace
+//    static void moreInfo();//    'More Info/Display shortcut menu: Ctrl+D
+//    static void enterKey();
+//    static void closeChrome();
+//    static void closeKodi();
+//    static void closeChromeAndKodi();
+//    static void netflix();
+//    static void kodi();
+}
+
 //    'Recorded TV: Ctrl+O or Ctrl+Shift+T
 //    'Guide: Ctrl+G
 //    'Music Library: Ctrl+M
@@ -236,7 +285,7 @@ void Shortcuts::netflix()
     QProcess process;
     //process.setWorkingDirectory("C:\\Program Files (x86)\\Google\\Chrome\\Application\\");
     //process.start("cmd.exe /c start www.netflix.com");
-    if(QFileInfo("C:\\Program Files (x86)\\Kodi\\kodi.exe").exists()) //64bit
+    if(QFileInfo("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe").exists()) //64bit
         process.startDetached("\"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\" -kiosk -fullscreen www.netflix.com");
     else //32-bit
         process.startDetached("\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" -kiosk -fullscreen www.netflix.com");

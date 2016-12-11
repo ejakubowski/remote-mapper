@@ -109,22 +109,7 @@ void MainWindow::hotkeyPressed(int id)
     QStringList mapping = keyMapList.value(id).split(",");
     //int vk_val = mapping[0].toInt();
     ui->outputTxt->append("processing hotkey [" + QString::number(id) + "] " + keyMapList.value(id));
-    if (mapping[1] == "mediaCenterStart")
-        Shortcuts::mediaCenterStart();
-    else if (mapping[1] == "record")
-        Shortcuts::record();
-    else if (mapping[1] == "stop")
-        Shortcuts::stop();
-    else if (mapping[1] == "enterKey")
-        Shortcuts::enterKey();
-    else if (mapping[1] == "closeChromeAndKodi")
-        Shortcuts::closeChromeAndKodi();
-    else if (mapping[1] == "netflix")
-        Shortcuts::netflix();
-    else if (mapping[1] == "kodi")
-        Shortcuts::kodi();
-    else if (mapping[1] == "guide")
-        Shortcuts::guide();
+    Shortcuts::RunShortcut(mapping[1]);
 }
 
 bool MainWindow::nativeEvent(const QByteArray &eventType, void *message, long *result)
@@ -154,6 +139,8 @@ bool MainWindow::nativeEvent(const QByteArray &eventType, void *message, long *r
 void MainWindow::on_sendKeysBtn_clicked()
 {
     ui->outputTxt->append("mediaCenterStart");
+    //QString s = "mediaCenterStart";
+    //Shortcuts::RunShortcut(s);
     Shortcuts::mediaCenterStart();
 //    // press DOWN "Alt-Tab"
 //    keybd_event(VK_MENU, 0, 0, 0);
@@ -168,7 +155,7 @@ void MainWindow::on_sendKeysBtn_clicked()
 
 void MainWindow::on_actionAbout_triggered()
 {
-     QMessageBox::information(this, "About", "Remote Mapper v1.0\nCreated by ejakubowski7@gmail.com");
+     QMessageBox::information(this, "About", "Remote Mapper v1.1\nCreated by ejakubowski7@gmail.com");
 }
 
 void MainWindow::on_actionE_xit_triggered()

@@ -1,11 +1,16 @@
 #ifndef SHORTCUTS_H
 #define SHORTCUTS_H
 
+#include <QThread>
+#include <QProcess>
+#include <QFileInfo>
+#include <QString>
 
 class Shortcuts
 {
 public:
     Shortcuts();
+    static void RunShortcut(QString &shortcutName);
     static void mediaCenterStart();//    'Media Center Start page (start Media Center, if necessary): Windows logo key+Alt+Enter
     static void recordedTv();//    'Recorded TV: Ctrl+O or Ctrl+Shift+T
     static void guide();//    'Guide: Ctrl+G
