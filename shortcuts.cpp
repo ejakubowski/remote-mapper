@@ -286,9 +286,9 @@ void Shortcuts::netflix()
     //process.setWorkingDirectory("C:\\Program Files (x86)\\Google\\Chrome\\Application\\");
     //process.start("cmd.exe /c start www.netflix.com");
     if(QFileInfo("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe").exists()) //64bit
-        process.startDetached("\"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\" -kiosk -fullscreen www.netflix.com");
+        process.startDetached("\"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\" -kiosk -fullscreen --disable-session-crashed-bubble --disable-infobars www.netflix.com");
     else //32-bit
-        process.startDetached("\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" -kiosk -fullscreen www.netflix.com");
+        process.startDetached("\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" -kiosk -fullscreen --disable-session-crashed-bubble --disable-infobars www.netflix.com");
     //process.waitForFinished(1000);
     //process.terminate();
 }
